@@ -16,7 +16,8 @@ public class Main {
         int deposit = 15000;
         int total = 0;
         int i = 1;
-        while (total < 2_459_000) {
+        int goalAchieved = 2_459_000;
+        while (total < goalAchieved) {
             total = total + deposit;
             System.out.println("Месяц " + i++ + " Сумма накоплений равна " + total + " рублей");
         }
@@ -33,8 +34,8 @@ public class Main {
         System.out.println();
         for (; b >= 1; b = b - 1) {
             System.out.print(" " + b);
-
         }
+        System.out.println();
     }
 
     public static void task3() {
@@ -42,7 +43,8 @@ public class Main {
         int population = 12_000_000;
         int birthRate = 17;
         int deathRate = 8;
-        for (int i = 1; i <= 10; i++) {
+        int reportingpPeriod = 10;
+        for (int i = 1; i <= reportingpPeriod; i++) {
             population = population + (population / 1000 * birthRate) - (population / 1000 * deathRate);
             System.out.println("Год " + i + ", численность населения составляет " + population);
         }
@@ -53,8 +55,9 @@ public class Main {
         int deposit = 15000;
         int total = 0;
         int i = 1;
-        while (total <= 12_000_000) {
-            total = total + total / 100 * 7;
+        int percentageOfSavings = 7;
+        while (total < 12_000_000) {
+            total = total + total / 100 * percentageOfSavings;
             total = total + deposit;
             System.out.println("Месяц " + i++ + " сумма накоплений " + total);
         }
@@ -65,8 +68,9 @@ public class Main {
         int deposit = 15000;
         int total = 0;
         int i = 1;
-        for (; total <= 12_000_000; i++) {
-            total = total + total / 100 * 7;
+        int percentageOfSavings = 7;
+        for (; total < 12_000_000; i++) {
+            total = total + total / 100 * percentageOfSavings;
             total = total + deposit;
             if (i % 6 == 0) {
                 System.out.println("Месяц " + i + " сумма накоплений " + total);
@@ -79,8 +83,11 @@ public class Main {
         int deposit = 15000;
         int total = 0;
         int i = 1;
-        for (; i <= 108; i++) {
-            total = total + total / 100 * 7;
+        int percentageOfSavings = 7;
+        int periodInYears = 9;
+        int periodInMonths = periodInYears * 12;
+        for (; i <= periodInMonths; i++) {
+            total = total + total / 100 * percentageOfSavings;
             total = total + deposit;
             if (i % 6 == 0) {
                 System.out.println("Месяц " + i + " сумма накоплений " + total);
@@ -91,7 +98,8 @@ public class Main {
     public static void task7() {
         System.out.println("Задача 7");
         int friday = 7;
-        for (; friday <= 31; friday = friday + 7) {
+        int monthIsOver = 31;
+        for (; friday <= monthIsOver; friday += 7) {
             System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет");
         }
     }
@@ -101,8 +109,9 @@ public class Main {
         int now = 2023;
         int past = now - 200;
         int future = now + 100;
-        for (int i = 0; i <= future; i = i + 79) {
-            if (i >= past && i <= future) {
+        int cometIsHere = 79;
+        for (int i = 0; i <= future; i = i + cometIsHere) {
+            if (i >= past) {
                 System.out.println(i);
             }
         }
