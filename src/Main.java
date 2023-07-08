@@ -56,7 +56,8 @@ public class Main {
         int total = 0;
         int i = 1;
         int percentageOfSavings = 7;
-        while (total < 12_000_000) {
+        int targetFigure = 12_000_000;
+        while (total < targetFigure) {
             total = total + total / 100 * percentageOfSavings;
             total = total + deposit;
             System.out.println("Месяц " + i++ + " сумма накоплений " + total);
@@ -69,7 +70,8 @@ public class Main {
         int total = 0;
         int i = 1;
         int percentageOfSavings = 7;
-        for (; total < 12_000_000; i++) {
+        int targetFigure = 12_000_000;
+        for (; total < targetFigure; i++) {
             total = total + total / 100 * percentageOfSavings;
             total = total + deposit;
             if (i % 6 == 0) {
